@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok Login Callback</title>
+</head>
+<body style="font-family: sans-serif; max-width: 600px; margin: 60px auto; text-align: center;">
+  <h2>TikTok-Login abgeschlossen</h2>
+  <p>Kopiere den folgenden Code und fuege ihn in dein Terminal ein (tiktok_auth.py):</p>
+  <textarea id="code" readonly style="width: 100%; height: 60px; font-size: 16px; padding: 8px;"></textarea>
+  <p><small>Falls das Feld leer ist: pruefe, ob die Adresse oben im Browser einen ?code=... Parameter enthaelt.</small></p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('code').value = params.get('code') || '(kein code-Parameter gefunden)';
+  </script>
+</body>
+</html>
